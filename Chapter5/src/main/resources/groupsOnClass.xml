@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<suite name="suitename">
+    <test name="runAll">
+        <classes>
+            <class name="com.course.testng.groups.GroupsOnClass1">
+                <methods>
+                    <!--匹配包含stu串的方法-->
+                    <include name=".*stu1.*"></include>
+                </methods>
+            </class>
+            <class name="com.course.testng.groups.GroupsOnClass2"></class>
+            <class name="com.course.testng.groups.GroupsOnClass3"></class>
+        </classes>
+
+    </test>
+
+    <test name="runOnlyStu">
+        <groups>
+            <run>
+
+                <include name="stu"></include>
+                <!--xml配置组名称等也支持正则表达式-->
+                <include name="stu.*"></include>
+                <exclude name="teacher"></exclude>
+
+            </run>
+        </groups>
+        <classes>
+            <class name="com.course.testng.groups.GroupsOnClass1"></class>
+            <class name="com.course.testng.groups.GroupsOnClass2"></class>
+            <class name="com.course.testng.groups.GroupsOnClass3"></class>
+        </classes>
+
+    </test>
+
+</suite>

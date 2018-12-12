@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<suite name="suitetest" group-by-instances="true">
+    <test name="test1">
+        <classes>
+            <class name="com.course.testng.factory.TestFactory"></class>
+        </classes>
+    </test>
+</suite>
